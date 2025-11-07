@@ -1,0 +1,792 @@
+[2025-10-30 20:38:59] === LTE Validation Iteration 1 ===
+[2025-10-30 20:38:59] [INFO] Running Command Set 1, Attempt 1
+[2025-10-30 20:38:59] [CMD] root
+[2025-10-30 20:39:14] [RESP] root
+-sh: root: command not found
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:39:14] [CMD] sudo dmesg -n 1
+[2025-10-30 20:39:19] [RESP] sudo dmesg -n 1
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:39:19] [CMD] sudo dmesg -n 1
+[2025-10-30 20:39:24] [RESP] sudo dmesg -n 1
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:39:24] Sending newline...
+[2025-10-30 20:39:27] [INFO] Command Set 1 completed successfully.
+[2025-10-30 20:39:27] [INFO] Running Command Set 2, Attempt 1
+[2025-10-30 20:39:27] [CMD] hciattach /dev/ttyS3 any
+[2025-10-30 20:39:33] [RESP] hciattach /dev/ttyS3 any
+Device setup complete
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:39:33] [CMD] hciconfig -a hci0 up
+[2025-10-30 20:39:39] [RESP] hciconfig -a hci0 up
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:39:39] [CMD] hciconfig -a
+[2025-10-30 20:39:45] [RESP] hciconfig -a
+hci0:	Type: Primary  Bus: UART
+	BD Address: FC:84:A7:B4:18:7E  ACL MTU: 1021:7  SCO MTU: 120:6
+	UP RUNNING 
+	RX bytes:1467 acl:0 sco:0 events:85 errors:0
+	TX bytes:932 acl:0 sco:0 commands:85 errors:0
+	Features: 0xff 0xfe 0x8f 0xfe 0xdb 0xff 0x7b 0x87
+	Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
+	Link policy: RSWITCH HOLD SNIFF 
+	Link mode: PERIPHERAL ACCEPT 
+	Name: 'am62xx-evm'
+	Class: 0x480000
+	Service Classes: Capturing, Telephony
+	Device Class: Miscellaneous, 
+	HCI Version:  (0xc)  Revision: 0x8300
+	LMP Version:  (0xc)  Subversion: 0x1054
+	Manufacturer: Marvell Technology Group Ltd. (72)
+
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:39:45] [CMD] sudo bluetoothctl
+[2025-10-30 20:39:51] [RESP] sudo bluetoothctl
+[?2004hWaiting to connect to bluetoothd...
+[2025-10-30 20:39:51] [CMD] power on
+[2025-10-30 20:39:57] [WARN] No response for: power on after 4s
+[2025-10-30 20:39:57] [CMD] exit
+[2025-10-30 20:40:04] [WARN] No response for: exit after 5s
+[2025-10-30 20:40:05] [INFO] Command Set 2 completed successfully.
+[2025-10-30 20:40:05] [INFO] Running Command Set 3, Attempt 1
+[2025-10-30 20:40:05] [CMD] cd ~
+[2025-10-30 20:40:11] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:40:11] [CMD] i2cdetect -y -r 1 
+[2025-10-30 20:40:17] [WARN] No response for: i2cdetect -y -r 1  after 4s
+[2025-10-30 20:40:17] [CMD] cd /sys/bus/iio/devices/iio:device1
+[2025-10-30 20:40:23] [WARN] No response for: cd /sys/bus/iio/devices/iio:device1 after 4s
+[2025-10-30 20:40:23] [CMD] cat name
+[2025-10-30 20:40:29] [WARN] No response for: cat name after 4s
+[2025-10-30 20:40:29] [CMD] cat in_accel_x_raw
+[2025-10-30 20:40:35] [WARN] No response for: cat in_accel_x_raw after 4s
+[2025-10-30 20:40:35] [CMD] cat in_accel_y_raw
+[2025-10-30 20:40:42] [WARN] No response for: cat in_accel_y_raw after 5s
+[2025-10-30 20:40:42] [CMD] cat in_accel_Z_raw
+[2025-10-30 20:40:49] [WARN] No response for: cat in_accel_Z_raw after 5s
+[2025-10-30 20:40:49] [CMD] cd ~
+[2025-10-30 20:40:55] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:40:55] [INFO] Command Set 3 completed successfully.
+[2025-10-30 20:40:55] [INFO] Running Command Set 4, Attempt 1
+[2025-10-30 20:40:55] [CMD] cd ~
+[2025-10-30 20:41:01] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:41:01] [CMD] i2cdetect -y -r 0
+[2025-10-30 20:41:07] [WARN] No response for: i2cdetect -y -r 0 after 4s
+[2025-10-30 20:41:07] [CMD] cd /sys/bus/iio/devices/iio:device0
+[2025-10-30 20:41:13] [WARN] No response for: cd /sys/bus/iio/devices/iio:device0 after 4s
+[2025-10-30 20:41:13] [CMD] cat name
+[2025-10-30 20:41:19] [WARN] No response for: cat name after 4s
+[2025-10-30 20:41:19] [CMD] cat in_anglvel_x_raw
+[2025-10-30 20:41:25] [WARN] No response for: cat in_anglvel_x_raw after 4s
+[2025-10-30 20:41:25] [CMD] cat in_anglvel_y_raw
+[2025-10-30 20:41:31] [WARN] No response for: cat in_anglvel_y_raw after 4s
+[2025-10-30 20:41:31] [CMD] cat in_anglvel_z_raw
+[2025-10-30 20:41:38] [WARN] No response for: cat in_anglvel_z_raw after 5s
+[2025-10-30 20:41:38] [CMD] cd ~
+[2025-10-30 20:41:44] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:41:44] [INFO] Command Set 4 completed successfully.
+[2025-10-30 20:41:44] [INFO] Running Command Set 5, Attempt 1
+[2025-10-30 20:41:44] [CMD] cd ~
+[2025-10-30 20:41:50] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:41:50] [CMD] i2cdetect -y -r 3
+[2025-10-30 20:41:56] [WARN] No response for: i2cdetect -y -r 3 after 4s
+[2025-10-30 20:41:56] [CMD] cd /sys/bus/iio/devices/iio:device2
+[2025-10-30 20:42:02] [WARN] No response for: cd /sys/bus/iio/devices/iio:device2 after 4s
+[2025-10-30 20:42:02] [CMD] cat name
+[2025-10-30 20:42:08] [WARN] No response for: cat name after 4s
+[2025-10-30 20:42:08] [CMD] cat in_temp_raw
+[2025-10-30 20:42:14] [WARN] No response for: cat in_temp_raw after 4s
+[2025-10-30 20:42:14] [CMD] cat in_humidityrelative_raw
+[2025-10-30 20:42:20] [WARN] No response for: cat in_humidityrelative_raw after 4s
+[2025-10-30 20:42:20] [CMD] cd ~
+[2025-10-30 20:42:26] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:42:26] [INFO] Command Set 5 completed successfully.
+[2025-10-30 20:42:26] [INFO] Running Command Set 6, Attempt 1
+[2025-10-30 20:42:26] [CMD] cd ~
+[2025-10-30 20:42:32] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:42:32] [CMD] i2cdetect -y -r 3
+[2025-10-30 20:42:38] [WARN] No response for: i2cdetect -y -r 3 after 4s
+[2025-10-30 20:42:38] [CMD] cd /sys/class/power_supply/bq2562x-charger
+[2025-10-30 20:42:45] [WARN] No response for: cd /sys/class/power_supply/bq2562x-charger after 4s
+[2025-10-30 20:42:45] [CMD] cat health
+[2025-10-30 20:42:51] [WARN] No response for: cat health after 4s
+[2025-10-30 20:42:51] [CMD] cat status
+[2025-10-30 20:42:57] [WARN] No response for: cat status after 4s
+[2025-10-30 20:42:57] [CMD] cat voltage_now
+[2025-10-30 20:43:03] [WARN] No response for: cat voltage_now after 4s
+[2025-10-30 20:43:03] [CMD] cat current_now
+[2025-10-30 20:43:09] [WARN] No response for: cat current_now after 4s
+[2025-10-30 20:43:09] [CMD] cd ~
+[2025-10-30 20:43:15] [WARN] No response for: cd ~ after 4s
+[2025-10-30 20:43:15] [INFO] Command Set 6 completed successfully.
+[2025-10-30 20:43:15] [INFO] Running Command Set 7, Attempt 1
+[2025-10-30 20:43:15] [CMD] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+[2025-10-30 20:43:21] [WARN] No response for: i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i after 4s
+[2025-10-30 20:43:21] [CMD] i2cget -f -y 3 0x06B 0x0E i 2
+[2025-10-30 20:43:27] [WARN] No response for: i2cget -f -y 3 0x06B 0x0E i 2 after 4s
+[2025-10-30 20:43:27] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:43:33] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:43:33] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x02
+[2025-10-30 20:43:39] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x02 after 4s
+[2025-10-30 20:43:39] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:43:45] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:43:45] [CMD] i2cget -f -y -a 2 0x30 0x1e
+[2025-10-30 20:43:51] [WARN] No response for: i2cget -f -y -a 2 0x30 0x1e after 4s
+[2025-10-30 20:43:51] [CMD] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:43:57] [WARN] No response for: microcom -s 115200 /dev/ttyS0 after 4s
+[2025-10-30 20:43:57] [CMD] AT
+[2025-10-30 20:44:04] [WARN] No response for: AT after 5s
+[2025-10-30 20:44:04] [ERROR] AT command 'AT' failed (no OK or empty response).
+[2025-10-30 20:44:04] [INFO] Retrying Command Set 7 (Attempt 2)...
+[2025-10-30 20:44:04] Sending Ctrl+X to exit microcom...
+[2025-10-30 20:44:06] [INFO] Microcom session exited and serial port closed.
+[2025-10-30 20:44:07] [INFO] Running Command Set 7, Attempt 2
+[2025-10-30 20:44:07] [CMD] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+[2025-10-30 20:44:13] [WARN] No response for: i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i after 4s
+[2025-10-30 20:44:13] [CMD] i2cget -f -y 3 0x06B 0x0E i 2
+[2025-10-30 20:44:19] [WARN] No response for: i2cget -f -y 3 0x06B 0x0E i 2 after 4s
+[2025-10-30 20:44:19] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:44:25] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:44:25] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x02
+[2025-10-30 20:44:31] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x02 after 4s
+[2025-10-30 20:44:31] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:44:37] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:44:37] [CMD] i2cget -f -y -a 2 0x30 0x1e
+[2025-10-30 20:44:43] [WARN] No response for: i2cget -f -y -a 2 0x30 0x1e after 4s
+[2025-10-30 20:44:43] [CMD] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:44:49] [WARN] No response for: microcom -s 115200 /dev/ttyS0 after 4s
+[2025-10-30 20:44:49] [CMD] AT
+[2025-10-30 20:44:56] [WARN] No response for: AT after 5s
+[2025-10-30 20:44:56] [ERROR] AT command 'AT' failed (no OK or empty response).
+[2025-10-30 20:44:56] [INFO] Retrying Command Set 7 (Attempt 3)...
+[2025-10-30 20:44:57] Sending Ctrl+X to exit microcom...
+[2025-10-30 20:44:59] [INFO] Microcom session exited and serial port closed.
+[2025-10-30 20:45:00] [INFO] Running Command Set 7, Attempt 3
+[2025-10-30 20:45:00] [CMD] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+[2025-10-30 20:45:06] [WARN] No response for: i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i after 4s
+[2025-10-30 20:45:06] [CMD] i2cget -f -y 3 0x06B 0x0E i 2
+[2025-10-30 20:45:12] [WARN] No response for: i2cget -f -y 3 0x06B 0x0E i 2 after 4s
+[2025-10-30 20:45:12] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:45:18] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:45:18] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x02
+[2025-10-30 20:45:24] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x02 after 4s
+[2025-10-30 20:45:24] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:45:30] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:45:30] [CMD] i2cget -f -y -a 2 0x30 0x1e
+[2025-10-30 20:45:36] [WARN] No response for: i2cget -f -y -a 2 0x30 0x1e after 4s
+[2025-10-30 20:45:36] [CMD] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:45:42] [WARN] No response for: microcom -s 115200 /dev/ttyS0 after 4s
+[2025-10-30 20:45:42] [CMD] AT
+[2025-10-30 20:45:49] [WARN] No response for: AT after 5s
+[2025-10-30 20:45:49] [ERROR] AT command 'AT' failed (no OK or empty response).
+[2025-10-30 20:45:49] [INFO] Retrying Command Set 7 (Attempt 4)...
+[2025-10-30 20:45:49] Sending Ctrl+X to exit microcom...
+[2025-10-30 20:45:51] [INFO] Microcom session exited and serial port closed.
+[2025-10-30 20:45:52] [INFO] Running Command Set 7, Attempt 4
+[2025-10-30 20:45:52] [CMD] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+[2025-10-30 20:45:58] [WARN] No response for: i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i after 4s
+[2025-10-30 20:45:58] [CMD] i2cget -f -y 3 0x06B 0x0E i 2
+[2025-10-30 20:46:04] [WARN] No response for: i2cget -f -y 3 0x06B 0x0E i 2 after 4s
+[2025-10-30 20:46:04] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:46:10] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:46:10] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x02
+[2025-10-30 20:46:16] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x02 after 4s
+[2025-10-30 20:46:16] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:46:22] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:46:22] [CMD] i2cget -f -y -a 2 0x30 0x1e
+[2025-10-30 20:46:28] [WARN] No response for: i2cget -f -y -a 2 0x30 0x1e after 4s
+[2025-10-30 20:46:28] [CMD] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:46:34] [WARN] No response for: microcom -s 115200 /dev/ttyS0 after 4s
+[2025-10-30 20:46:34] [CMD] AT
+[2025-10-30 20:46:41] [WARN] No response for: AT after 5s
+[2025-10-30 20:46:41] [ERROR] AT command 'AT' failed (no OK or empty response).
+[2025-10-30 20:46:41] [INFO] Retrying Command Set 7 (Attempt 5)...
+[2025-10-30 20:46:41] Sending Ctrl+X to exit microcom...
+[2025-10-30 20:46:44] [INFO] Microcom session exited and serial port closed.
+[2025-10-30 20:46:45] [INFO] Running Command Set 7, Attempt 5
+[2025-10-30 20:46:45] [CMD] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+[2025-10-30 20:46:51] [WARN] No response for: i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i after 4s
+[2025-10-30 20:46:51] [CMD] i2cget -f -y 3 0x06B 0x0E i 2
+[2025-10-30 20:46:57] [WARN] No response for: i2cget -f -y 3 0x06B 0x0E i 2 after 4s
+[2025-10-30 20:46:57] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:47:03] [WARN] No response for: i2cset -f -y -a 2 0x30 0x1e 0x03 after 4s
+[2025-10-30 20:47:03] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x02
+[2025-10-30 20:47:09] [RESP] [22P[0;94m[bluetooth][0m# [K[K[?2004l[?2004h[0;94m[bluetooth][0m# power on
+[?2004l[?2004h[0;94m[bluetooth][0m# [K[?2004l[?2004h[0;94m[bluetooth][0m# exit
+[?2004l[?2004h[0;94m[bluetooth][0m# [K[?2004lroot@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 1 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd /sys/bus/iio/devices/iio:device1
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat name
+lsm6ds3tr-c_accel
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat in_accel_x_raw
+-122
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat in_accel_y_raw
+-111
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat in_accel_Z_raw
+cat: can't open 'in_accel_Z_raw': No such file or directory
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- 42 -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd /sys/bus/iio/devices/iio:device0
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat name
+lsm6ds3tr-c_gyro
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat in_anglvel_x_raw
+[2025-10-30 20:47:09] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:47:15] [RESP] i2cset -f -y -a 2 0x30 0x1e 0x03
+
+-426
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat in_anglvel_z_raw
+-55
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 3
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- UU -- -- -- -- -- -- -- -- 4d -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd /sys/bus/iio/devices/iio:device2
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# cat name
+hdc3020
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# cat in_temp_raw
+4989
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# cat in_humidityrelative_raw
+151
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 3
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- UU -- -- -- -- -- -- -- -- 4d -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd /sys/class/power_supply/bq2562x-charger
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# cat health
+Dead
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# cat status
+Charging
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# cat voltage_now
+0
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# cat current_now
+0
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cget -f -y 3 0x06B 0x0E i 2
+0x00 0x0c
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cset -f -y -a 2 0x30 0x1e 0x03
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cset -f -y -a 2 0x30 0x1e 0x02
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cset -f -y -a 2 0x30 0x1e 0x03
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cget -f -y -a 2 0x30 0x1e
+0x03
+root@am62xx-evm:~# 
+root@am62xx-evm:~# microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:47:15] [CMD] i2cget -f -y -a 2 0x30 0x1e
+[2025-10-30 20:47:21] [WARN] No response for: i2cget -f -y -a 2 0x30 0x1e after 4s
+[2025-10-30 20:47:21] [CMD] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:47:27] [WARN] No response for: microcom -s 115200 /dev/ttyS0 after 4s
+[2025-10-30 20:47:27] [CMD] AT
+[2025-10-30 20:47:34] [RESP] AT
+OK
+[2025-10-30 20:47:34] [CMD] AT+CFUN=0
+[2025-10-30 20:47:58] [RESP] AT+CFUN=0
+OK
+[2025-10-30 20:47:58] [CMD] AT+URAT=9
+[2025-10-30 20:48:10] [RESP] AT+URAT=9
+OK
+[2025-10-30 20:48:10] [CMD] AT+UMNOPROF=90
+[2025-10-30 20:48:22] [RESP] AT+UMNOPROF=90
+OK
+[2025-10-30 20:48:22] [CMD] AT+CFUN=1
+[2025-10-30 20:48:36] [RESP] AT+CFUN=1
+OK
+[2025-10-30 20:48:36] [CMD] AT+COPS?
+[2025-10-30 20:48:50] [RESP] AT+COPS?
++COPS: 2
+
+OK
+[2025-10-30 20:48:50] [CMD] AT+CSQ
+[2025-10-30 20:48:57] [RESP] AT+CSQ
++CSQ: 31,0
+
+OK
+[2025-10-30 20:48:57] [CMD] AT+CGDCONT=1,"IP","airtelgprs.com"
+[2025-10-30 20:49:10] [RESP] AT+CGDCONT=1,"IP","airtelgprs.com"
+OK
+[2025-10-30 20:49:10] [CMD] AT+CGACT=1,1
+[2025-10-30 20:49:22] [RESP] AT+CGACT=1,1
+ERROR
+[2025-10-30 20:49:22] [CMD] AT+CGCONTRDP=1
+[2025-10-30 20:49:35] [RESP] AT+CGCONTRDP=1
+OK
+[2025-10-30 20:49:35] [CMD] AT+UPING="www.google.com"
+[2025-10-30 20:51:15] [RESP] AT+UPING="www.google.com"
++CME ERROR: Operation not allowed
+[2025-10-30 20:51:15] [CMD] AT+CPWROFF
+[2025-10-30 20:51:30] [RESP] AT+CPWROFF
+OK
+
++UCPWROFF
+ 
+[2025-10-30 20:51:30] Sending Ctrl+X to exit microcom...
+[2025-10-30 20:51:35] [INFO] Microcom session exited and serial port closed.
+[2025-10-30 20:51:35] [INFO] Command Set 7 completed successfully.
+[2025-10-30 20:51:35] [INFO] Running Command Set 8, Attempt 1
+[2025-10-30 20:51:35] [CMD] reboot
+[2025-10-30 20:53:46] [RESP] reboot
+root@am62xx-evm:~# 
+         Stopping [0;1;39mSession c1 of User root[0m...
+[[0;32m  OK  [0m] Removed slice [0;1;39mSlice /system/modprobe[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBluetooth Support[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRPC Port Mapper[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mTimer Units[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mHardware activated USB gadget[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mProcess Core Dump Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mLoad/Save RF Kill Switch Status /dev/rfkill Watch[0m.
+         Stopping [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+         Stopping [0;1;39mBlueALSA player service[0m...
+         Stopping [0;1;39mBlueALSA service[0m...
+         Stopping [0;1;39mBluetooth service[0m...
+         Stopping [0;1;39mcontainerd container runtime[0m...
+         Stopping [0;1;39mPeriodic Command Scheduler[0m...
+         Stopping [0;1;39mDNS forwarder and DHCP server[0m...
+         Stopping [0;1;39mGetty on tty1[0m...
+         Stopping [0;1;39mNetperf Benchmark Server[0m...
+         Stopping [0;1;39mNFS status monitor for NFSv2/3 locking.[0m...
+         Stopping [0;1;39mSerial Getty on ttyS2[0m...
+         Stopping [0;1;39mLoad/Save Random Seed[0m...
+         Stopping [0;1;39mTEE Supplicant[0m...
+         Stopping [0;1;39mthermal-zone-init.service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mPeriodic Command Scheduler[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mTEE Supplicant[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetperf Benchmark Server[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNFS status monitor for NFSv2/3 locking.[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mcontainerd container runtime[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSerial Getty on ttyS2[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mBlueALSA player service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mBlueALSA service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mBluetooth service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDNS forwarder and DHCP server[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mthermal-zone-init.service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSession c1 of User root[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mSlice /system/getty[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mSlice /system/serial-getty[0m.
+         Stopping [0;1;39mLSB: network benchmark[0m...
+         Stopping [0;1;39mLSB: network connection manager[0m...
+         Stopping [0;1;39mLSB: Expand Rootfs of boot device[0m...
+         Stopping [0;1;39mUser Login Management[0m...
+         Stopping [0;1;39mUser Manager for UID 0[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: network benchmark[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 0[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork is Online[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager Wait Online[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/0[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: network connection manager[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: Expand Rootfs of boot device[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/0[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/0[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 0[0m.
+         Stopping [0;1;39mPermit User Sessions[0m...
+         Stopping [0;1;39mtelnetd.service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mtelnetd.service[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+[2025-10-30 20:53:46] [CMD] root
+[2025-10-30 20:54:16] [RESP] ro
+[  119.914391] audit: type=1334 audit(1761837830.448:10): prog-id=11 op=LOAD
+[  119.927763] audit: type=1334 audit(1761837830.456:11): prog-id=12 op=LOAD
+[  120.520311] audit: type=1006 audit(1761837831.052:12): pid=556 uid=0 old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=1 res=1
+[  120.553507] audit: type=1300 audit(1761837831.052:12): arch=c00000b7 syscall=64 success=yes exit=1 a0=8 a1=ffffdaa3fc48 a2=1 a3=0 items=0 ppid=1 pid=556 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=1 comm="(systemd)" exe="/lib/systemd/systemd" key=(null)
+[  120.599516] audit: type=1327 audit(1761837831.052:12): proctitle="(systemd)"
+[  120.622606] audit: type=1334 audit(1761837831.156:13): prog-id=13 op=LOAD
+[  120.633804] audit: type=1300 audit(1761837831.156:13): arch=c00000b7 syscall=280 success=yes exit=8 a0=5 a1=ffffd8ce0a10 a2=78 a3=0 items=0 ppid=1 pid=556 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=1 comm="systemd" exe="/lib/systemd/systemd" key=(null)
+[  120.664335] audit: type=1327 audit(1761837831.156:13): proctitle="(systemd)"
+[  120.680179] audit: type=1334 audit(1761837831.164:14): prog-id=13 op=UNLOAD
+[  120.697493] audit: type=1334 audit(1761837831.164:15): prog-id=14 op=LOAD
+7[r[999;999H[6nroot@am62xx-evm:~#
+[2025-10-30 20:54:16] [CMD] sudo dmesg -n 1
+[2025-10-30 20:54:22] [RESP] sudo dmesg -n 1
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:54:22] [CMD] sudo dmesg -n 1
+[2025-10-30 20:54:28] [RESP] sudo dmesg -n 1
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:54:28] Sending newline...
+[2025-10-30 20:54:32] [CMD] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+[2025-10-30 20:54:38] [RESP] i2cset -f -y 3 0x6B 0x0E 0x00 0x0c i
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:54:38] [CMD] i2cget -f -y 3 0x06B 0x0E i 2
+[2025-10-30 20:54:44] [RESP] i2cget -f -y 3 0x06B 0x0E i 2
+0x00 0x0c
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:54:44] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:54:50] [RESP] i2cset -f -y -a 2 0x30 0x1e 0x03
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:54:50] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x02
+[2025-10-30 20:54:56] [RESP] i2cset -f -y -a 2 0x30 0x1e 0x02
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:54:56] [CMD] i2cset -f -y -a 2 0x30 0x1e 0x03
+[2025-10-30 20:55:02] [RESP] i2cset -f -y -a 2 0x30 0x1e 0x03
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:55:02] [CMD] i2cget -f -y -a 2 0x30 0x1e
+[2025-10-30 20:55:08] [RESP] i2cget -f -y -a 2 0x30 0x1e
+0x03
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:55:08] [CMD] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:55:14] [RESP] microcom -s 115200 /dev/ttyS0
+[2025-10-30 20:55:14] [CMD] AT
+[2025-10-30 20:55:21] [RESP] AT
+OK
+[2025-10-30 20:55:21] [CMD] AT+CFUN=0
+[2025-10-30 20:55:45] [RESP] AT+CFUN=0
+OK
+[2025-10-30 20:55:45] [CMD] AT+URAT=9
+[2025-10-30 20:55:57] [RESP] AT+URAT=9
+OK
+[2025-10-30 20:55:57] [CMD] AT+UMNOPROF=90
+[2025-10-30 20:56:09] [RESP] AT+UMNOPROF=90
+OK
+[2025-10-30 20:56:09] [CMD] AT+CFUN=1
+[2025-10-30 20:56:23] [RESP] AT+CFUN=1
+OK
+[2025-10-30 20:56:23] [CMD] AT+COPS?
+[2025-10-30 20:56:37] [RESP] AT+COPS?
++COPS: 2
+
+OK
+[2025-10-30 20:56:37] [CMD] AT+CSQ
+[2025-10-30 20:56:44] [RESP] AT+CSQ
++CSQ: 31,0
+
+OK
+[2025-10-30 20:56:44] [CMD] AT+CGDCONT=1,"IP","airtelgprs.com"
+[2025-10-30 20:56:57] [RESP] AT+CGDCONT=1,"IP","airtelgprs.com"
+OK
+[2025-10-30 20:56:57] [CMD] AT+CGACT=1,1
+[2025-10-30 20:57:09] [RESP] AT+CGACT=1,1
+ERROR
+[2025-10-30 20:57:09] [CMD] AT+CGCONTRDP=1
+[2025-10-30 20:57:22] [RESP] AT+CGCONTRDP=1
+OK
+[2025-10-30 20:57:22] [CMD] AT+UPING="www.google.com"
+[2025-10-30 20:59:07] [RESP] AT+UPING="www.google.com"
++CME ERROR: Operation not allowed
+[2025-10-30 20:59:07] [CMD] AT+CPWROFF
+[2025-10-30 20:59:22] [RESP] AT+CPWROFF
+OK
+
++UCPWROFF
+ 
+[2025-10-30 20:59:22] Sending Ctrl+X to exit microcom...
+[2025-10-30 20:59:27] [INFO] Microcom session exited and serial port closed.
+[2025-10-30 20:59:27] [INFO] Command Set 8 completed successfully.
+[2025-10-30 20:59:28] [INFO] Running Command Set 9, Attempt 1
+[2025-10-30 20:59:28] [CMD] hciattach /dev/ttyS3 any
+[2025-10-30 20:59:34] [RESP] hciattach /dev/ttyS3 any
+Device setup complete
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:59:34] [CMD] hciconfig -a hci0 up
+[2025-10-30 20:59:40] [RESP] hciconfig -a hci0 up
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:59:40] [CMD] hciconfig -a
+[2025-10-30 20:59:46] [RESP] hciconfig -a
+hci0:	Type: Primary  Bus: UART
+	BD Address: FC:84:A7:B4:18:7E  ACL MTU: 1021:7  SCO MTU: 120:6
+	UP RUNNING 
+	RX bytes:1467 acl:0 sco:0 events:85 errors:0
+	TX bytes:932 acl:0 sco:0 commands:85 errors:0
+	Features: 0xff 0xfe 0x8f 0xfe 0xdb 0xff 0x7b 0x87
+	Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
+	Link policy: RSWITCH HOLD SNIFF 
+	Link mode: PERIPHERAL ACCEPT 
+	Name: 'am62xx-evm'
+	Class: 0x480000
+	Service Classes: Capturing, Telephony
+	Device Class: Miscellaneous, 
+	HCI Version:  (0xc)  Revision: 0x8300
+	LMP Version:  (0xc)  Subversion: 0x1054
+	Manufacturer: Marvell Technology Group Ltd. (72)
+
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 20:59:46] [CMD] sudo bluetoothctl
+[2025-10-30 20:59:52] [RESP] sudo bluetoothctl
+[?2004hWaiting to connect to bluetoothd...
+[2025-10-30 20:59:52] [CMD] power on
+[2025-10-30 20:59:58] [WARN] No response for: power on after 4s
+[2025-10-30 20:59:58] [CMD] exit
+[2025-10-30 21:00:05] [WARN] No response for: exit after 5s
+[2025-10-30 21:00:05] [INFO] Command Set 9 completed successfully.
+[2025-10-30 21:00:05] [INFO] Running Command Set 10, Attempt 1
+[2025-10-30 21:00:05] [CMD] cd ~
+[2025-10-30 21:00:11] [WARN] No response for: cd ~ after 4s
+[2025-10-30 21:00:11] [CMD] i2cdetect -y -r 1 
+[2025-10-30 21:00:17] [WARN] No response for: i2cdetect -y -r 1  after 4s
+[2025-10-30 21:00:17] [CMD] cd /sys/bus/iio/devices/iio:device1
+[2025-10-30 21:00:23] [WARN] No response for: cd /sys/bus/iio/devices/iio:device1 after 4s
+[2025-10-30 21:00:23] [CMD] cat name
+[2025-10-30 21:00:29] [WARN] No response for: cat name after 4s
+[2025-10-30 21:00:29] [CMD] cat in_accel_x_raw
+[2025-10-30 21:00:35] [WARN] No response for: cat in_accel_x_raw after 4s
+[2025-10-30 21:00:35] [CMD] cat in_accel_y_raw
+[2025-10-30 21:00:42] [WARN] No response for: cat in_accel_y_raw after 5s
+[2025-10-30 21:00:42] [CMD] cat in_accel_Z_raw
+[2025-10-30 21:00:49] [WARN] No response for: cat in_accel_Z_raw after 5s
+[2025-10-30 21:00:49] [CMD] cd ~
+[2025-10-30 21:00:55] [WARN] No response for: cd ~ after 4s
+[2025-10-30 21:00:55] [INFO] Command Set 10 completed successfully.
+[2025-10-30 21:00:55] [INFO] Running Command Set 11, Attempt 1
+[2025-10-30 21:00:55] [CMD] cd ~
+[2025-10-30 21:01:01] [WARN] No response for: cd ~ after 4s
+[2025-10-30 21:01:01] [CMD] i2cdetect -y -r 0
+[2025-10-30 21:01:07] [WARN] No response for: i2cdetect -y -r 0 after 4s
+[2025-10-30 21:01:07] [CMD] cd /sys/bus/iio/devices/iio:device0
+[2025-10-30 21:01:13] [WARN] No response for: cd /sys/bus/iio/devices/iio:device0 after 4s
+[2025-10-30 21:01:13] [CMD] cat name
+[2025-10-30 21:01:19] [WARN] No response for: cat name after 4s
+[2025-10-30 21:01:19] [CMD] cat in_anglvel_x_raw
+[2025-10-30 21:01:25] [WARN] No response for: cat in_anglvel_x_raw after 4s
+[2025-10-30 21:01:25] [CMD] cat in_anglvel_y_raw
+[2025-10-30 21:01:31] [WARN] No response for: cat in_anglvel_y_raw after 4s
+[2025-10-30 21:01:31] [CMD] cat in_anglvel_z_raw
+[2025-10-30 21:01:38] [WARN] No response for: cat in_anglvel_z_raw after 5s
+[2025-10-30 21:01:38] [CMD] cd ~
+[2025-10-30 21:01:44] [WARN] No response for: cd ~ after 4s
+[2025-10-30 21:01:44] [INFO] Command Set 11 completed successfully.
+[2025-10-30 21:01:44] [INFO] Running Command Set 12, Attempt 1
+[2025-10-30 21:01:44] [CMD] cd ~
+[2025-10-30 21:01:50] [WARN] No response for: cd ~ after 4s
+[2025-10-30 21:01:50] [CMD] i2cdetect -y -r 3
+[2025-10-30 21:01:56] [RESP] [22P[0;94m[bluetooth][0m# [K[K[?2004l[?2004h[0;94m[bluetooth][0m# power on
+[?2004l[?2004h[0;94m[bluetooth][0m# [K[?2004l[?2004h[0;94m[bluetooth][0m# exit
+[?2004l[?2004h[0;94m[bluetooth][0m# [K[?2004lroot@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 1 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd /sys/bus/iio/devices/iio:device1
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat name
+lsm6ds3tr-c_accel
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat in_accel_x_raw
+-165
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat in_accel_y_raw
+-150
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cat in_accel_Z_raw
+cat: can't open 'in_accel_Z_raw': No such file or directory
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device1# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- 42 -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd /sys/bus/iio/devices/iio:device0
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat name
+lsm6ds3tr-c_gyro
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat in_anglvel_x_raw
+410
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat in_anglvel_y_raw
+-394
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cat in_anglvel_z_raw
+-49
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device0# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~# i2cdetect -y -r 3
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- UU -- -- -- -- -- -- -- -- 4d -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 21:01:56] [CMD] cd /sys/bus/iio/devices/iio:device2
+[2025-10-30 21:02:02] [RESP] cd /sys/bus/iio/devices/iio:device2
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2#
+[2025-10-30 21:02:02] [CMD] cat name
+[2025-10-30 21:02:08] [RESP] cat name
+hdc3020
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2#
+[2025-10-30 21:02:08] [CMD] cat in_temp_raw
+[2025-10-30 21:02:14] [RESP] cat in_temp_raw
+3824
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2#
+[2025-10-30 21:02:14] [CMD] cat in_humidityrelative_raw
+[2025-10-30 21:02:20] [RESP] cat in_humidityrelative_raw
+273
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2# 
+root@am62xx-evm:/sys/bus/iio/devices/iio:device2#
+[2025-10-30 21:02:20] [CMD] cd ~
+[2025-10-30 21:02:26] [RESP] cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 21:02:26] [INFO] Command Set 12 completed successfully.
+[2025-10-30 21:02:27] [INFO] Running Command Set 13, Attempt 1
+[2025-10-30 21:02:27] [CMD] cd ~
+[2025-10-30 21:02:33] [RESP] cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 21:02:33] [CMD] i2cdetect -y -r 3
+[2025-10-30 21:02:39] [RESP] i2cdetect -y -r 3
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- UU -- -- -- -- -- -- -- -- 4d -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 21:02:39] [CMD] cd /sys/class/power_supply/bq2562x-charger
+[2025-10-30 21:02:45] [RESP] cd /sys/class/power_supply/bq2562x-charger
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger#
+[2025-10-30 21:02:45] [CMD] cat health
+[2025-10-30 21:02:51] [RESP] cat health
+Dead
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger#
+[2025-10-30 21:02:51] [CMD] cat status
+[2025-10-30 21:02:57] [RESP] cat status
+Charging
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger#
+[2025-10-30 21:02:57] [CMD] cat voltage_now
+[2025-10-30 21:03:03] [RESP] cat voltage_now
+0
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger#
+[2025-10-30 21:03:03] [CMD] cat current_now
+[2025-10-30 21:03:09] [RESP] cat current_now
+0
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger# 
+root@am62xx-evm:/sys/class/power_supply/bq2562x-charger#
+[2025-10-30 21:03:09] [CMD] cd ~
+[2025-10-30 21:03:15] [RESP] cd ~
+root@am62xx-evm:~# 
+root@am62xx-evm:~#
+[2025-10-30 21:03:15] [INFO] Command Set 13 completed successfully.
+[2025-10-30 21:03:15] === Iteration 1 Complete ===
+
